@@ -26,7 +26,7 @@ img.big{
 	font-weight: bold;
 }
 a{
-	a.text-decoration: none;
+	text-decoration: none;
 }
 /*.nav_button{
 	border: solid thin black;
