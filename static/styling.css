@@ -1,5 +1,8 @@
 body{
 	font-family: Time New Roman;
+	/*background-image: url("static/img1.jpg");
+	background-repeat: no-repeat;
+	background-attachment: fixed;*/
 }
 img.tiny{
 	width: 20px;
