@@ -1,0 +1,56 @@
+<!doctype html>
+<head>
+	<link rel="stylesheet" href="/static/styling.css">
+</head>
+<html>
+	<body>
+		<form action='/updateCountryByName'>
+		<h1>{{c['name']}}</h1>
+		<div class = 'properties'>
+			<div>
+				<div>
+					<input name="name" type="hidden" value="{{c['name']}}">
+				</div>
+			</div>
+			<div>
+				<div>Capital</div>
+				<div><input name="capital" value="{{c['capital']}}"></div>
+			</div>
+			<div>
+				<div>Continent</div>
+				<div><input name="continent" value="{{c['continent']}}"></div>
+			</div>
+			<div>
+				<!-- https://www.w3schools.com/tags/tag_sup.asp -->
+				<div>Area(km<sup>2</sup>)</div>
+				<div><input name="area" value="{{c['area']}}"></div>
+			</div>
+			
+			<div>
+				<div>Population (Millions)</div>
+				<div><input name="population" value="{{c['population']}}"></div>
+			</div>
+			<div>
+				<div>GDP (million $)</div>
+				<div><input name="gdp" value="{{c['gdp']}}"></div>
+			</div>
+			<div>     
+				<div>TLD</div>
+				<div><input name="tld" value="{{c['tld']}}"></div>
+			</div>
+			
+			<div>
+				<!-- <div>Flag</div> -->
+				<div><img src="{{c['flag']}}" class="big"></div>
+
+			</form>
+			</div>
+			
+			<div class="delete_button">
+				<a href="/delete/{{c.name}}"><input type="button" name="delete" value="Delete"></a>
+				<input type="submit" name="submit" value="Submit">
+			</div>
+		</div>
+		
+	</body>
+</html>

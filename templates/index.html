@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="/static/styling.css">
+</head>
+<body>
+	<h1>World Factbook</h1>
+	<div>There are {{w|length}} countries in the world</div>
+	<ul>
+		{% for c in w %}
+		<li>
+			<a href="/countryByName/{{c.name}}"><img src="{{c.flag}}" class="tiny" >{{c.name}}</a>
+		</li>
+		{% endfor %}
+	</ul>
+	<div class='nav_button'>
+		<!-- https://www.codeproject.com/Questions/356089/How-to-witre-a-if-condition-in-HTML-Tags -->
+		{% if (page_number-page_size) < 0 %}
+		<a href='/begin/{{page_number-page_size}}' ><input type="button" name="previous" value="Previous Page" disabled=""></a>	
+		{% else %}
+		<a href='/begin/{{page_number-page_size}}'><input type="button" name="previous" value="Previous Page"></a>
+		{% endif %}
+	
+		{% if (page_number+page_size) > 195 %}
+		<a href='/begin/{{page_number+page_size}}'><input type="button" name="next" value="Next Page" disabled=""></a>	
+		{% else %}
+		<a href='/begin/{{page_number+page_size}}'><input type="button" name="next" value="Next Page"></a>
+		{% endif %}
+		<a href='/create'><input type="button" name="createCountry" value="Create Country"></a>
+	</div>
+</body>
+</html>

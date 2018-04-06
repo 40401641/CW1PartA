@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="/static/styling.css">
+</head>
+<body>
+		<h1>{{a}}</h1>
+		<div>There are {{length_of_c1}} countries in this page </div>
+		<ul>
+			{% for c in c1 %}
+			<li><a href="/countryByName/{{c.name}}"><img src="{{c.flag}}" class="tiny" >{{c.name}}</a></li>
+			{% endfor %}
+		</ul>
+		
+		
+</body>
+</html>

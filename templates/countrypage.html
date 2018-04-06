@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="/static/styling.css">
+</head>
+<body>
+	<h1>{{c['name']}}</h1>
+		<div class = 'properties'>
+			<div>
+				<div>Capital</div>
+				<div>{{c['capital']}}</div>
+			</div>
+			<div>
+				<div>Continent</div>
+				<div><a href="../continent/{{c.continent}}">{{c['continent']}}</a></div>
+			</div>
+			<div>
+				<!-- https://www.w3schools.com/tags/tag_sup.asp -->
+				<div>Area(km<sup>2</sup>)</div>
+				<div>{{'{:,.0f}'.format(c['area'])}}</div>
+			</div>
+			<div>     
+				<div>Population</div>
+				<div>{{'{:,.2f}'.format(c['area'])}}</div>
+			</div>
+			<div>     
+				<div>GDP(million $)</div>
+				<div>{{'{:,.2f}'.format(c['area'])}}</div>
+			</div>
+			<div>     
+				<div>TLD</div>
+				<div>{{c.tld}}</div>
+			</div>
+			<div>
+				<!-- <div>Flag</div> -->
+				<div><img src="{{c['flag']}}" class="big"></div>
+			</div>
+
+		</div>
+		<div>
+			<a href="/editcountryByName/{{c.name}}"><input type="button" name="edit" value="Edit"></a>
+			<!-- <a href="/delete/{{c.name}}"><input type="button" name="delete" value="Delete"></a> -->
+		</div>
+		
+</body>
+</html>

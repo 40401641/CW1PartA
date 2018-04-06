@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="/static/styling.css">
+	
+</head>
+<body>
+<form action='/createCountry'>
+		<div class = 'properties'>
+			<div>
+				<div>
+					<div>Country Name</div>
+					<div><input name="name" placeholder="Country Name"></div>
+					<!-- <input name="name" type="hidden" value="{{c['name']}}"> -->
+				</div>
+			</div>
+			<div>
+				<div>Capital</div>
+				<div><input name="capital" placeholder="City"></div>
+			</div>
+			<div>
+				<div>Continent</div>
+				<div><input name="continent" placeholder="Continent" "></div>
+			</div>
+			<div>
+				<div>Area(km<sup>2</sup>)</div>
+				<div><input name="area" placeholder="Area" "></div>
+			</div>
+			
+			<div>
+				<div>Population (Millions)</div>
+				<div><input name="population" placeholder="Population" "></div>
+			</div>
+			<div>
+				<div>GDP (million $)</div>
+				<div><input name="gdp" placeholder="GDP" "></div>
+			</div>
+			<div>     
+				<div>TLD</div>
+				<div><input name="tld" placeholder="TLD" "></div>
+			</div>
+			
+			<div>
+				<div>Flag</div>
+				<div><input name="flag" placeholder="URL Link" "></div>
+				<!-- <div>Flag</div> -->
+				<!-- <div><img src="{{c['flag']}}" class="big"></div> -->
+
+			
+			</div>
+			
+			<input type="submit" name="submit" value="Submit">
+			</div>
+		</div>
+</form>
+</body>
+</html>
