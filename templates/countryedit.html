@@ -23,22 +23,20 @@
 			<div>
 				<!-- https://www.w3schools.com/tags/tag_sup.asp -->
 				<div>Area(km<sup>2</sup>)</div>
-				<div><input name="area" value="{{c['area']}}"></div>
+				<div>{{'{:,.0f}'.format(c['area'])}}</div>
 			</div>
-			
-			<div>
-				<div>Population (Millions)</div>
-				<div><input name="population" value="{{c['population']}}"></div>
+			<div>     
+				<div>Population</div>
+				<div>{{'{:,.2f}'.format(c['area'])}}</div>
 			</div>
-			<div>
-				<div>GDP (million $)</div>
-				<div><input name="gdp" value="{{c['gdp']}}"></div>
+			<div>     
+				<div>GDP(million $)</div>
+				<div>{{'{:,.2f}'.format(c['area'])}}</div>
 			</div>
 			<div>     
 				<div>TLD</div>
-				<div><input name="tld" value="{{c['tld']}}"></div>
+				<div>{{c.tld}}</div>
 			</div>
-			
 			<div>
 				<!-- <div>Flag</div> -->
 				<div><img src="{{c['flag']}}" class="big"></div>
