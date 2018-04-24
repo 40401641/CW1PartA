@@ -3,6 +3,7 @@ body{
 	/*background-image: url("static/img1.jpg");
 	background-repeat: no-repeat;
 	background-attachment: fixed;*/
+	background-color: #c1ddad;
 }
 img.tiny{
 	width: 20px;
@@ -20,13 +21,31 @@ img.big{
 }
 .properties div div:first-child{
 	width: 20ex;
-	padding-top: 	2ex;
+	padding-top: 2ex;
+	/*color: white;*/
 }
 .properties div div:last-child{
 	font-weight: bold;
 }
 a{
 	text-decoration: none;
+	color: black;
+}
+
+ul#sort a:hover{
+	background-color: #4f6055;
+}
+
+ul#sort a:link{
+	background-color: #37d66c;
+	color: white;
+	padding: 10px 10px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	list-style-type: none;
+	border: solid thin;
+	border-radius: 1ex;
 }
 /*.nav_button{
 	border: solid thin black;

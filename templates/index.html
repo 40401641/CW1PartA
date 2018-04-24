@@ -1,15 +1,6 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<link rel="stylesheet" href="/static/styling.css">
-</head>
-<body>
-	<h1>World Factbook</h1>
-	<div>
-		{% for j in lota %}
-		<a href="/alpha/{{j}}" >{{j}}</a>
-		{% endfor %}
-	</div>
+{% extends "base.html" %}
+{% block content %}
+	
 	<div>There are {{w|length}} countries in this page</div>
 	<ul>
 		{% for c in w %}
@@ -33,5 +24,4 @@
 		{% endif %}
 		<a href='/create'><input type="button" name="createCountry" value="Create Country"></a>
 	</div>
-</body>
-</html>
+{% endblock%}
