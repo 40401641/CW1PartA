@@ -3,15 +3,36 @@ import json
 
 page_size=20
 w=json.load(open("worldl.json"))
+lota = sorted(list(set([c['name'][0] for c in w])))
+
+print (lota)
+
+for c in w:
+    c['tld']=c['tld'][1:]
+page_size=20
+
 app=Flask(__name__)
 for c in w:
 	c['tld']=c['tld'][1:]
 
- # @app.route('/')
- # def index():
- #  	return render_template('index.html',
- #  		w=w[0:page_size],
- #  		page_number=0)
+@app.route('/')
+def index():
+   	return render_template('index.html',
+   		w=w[0:page_size],
+   		page_number=0,
+        page_size=page_size,
+        lota=lota)
+
+@app.route('/alpha/<a>')
+def alpha(a):
+    c1=[c for c in w if c['name'][0]==a]
+    return render_template (
+        'continentpage.html',
+        length_of_c1=len(c1),
+        c1 = c1,
+        a = a,
+        lota=lota)
+
 
 @app.route('/country/<i>')
 def country(i):
@@ -40,7 +61,8 @@ def beginPage(b):
     return render_template('index.html',
         w = w[bn:bn+page_size],
         page_number = bn,
-        page_size = page_size
+        page_size = page_size,
+        lota=lota
         )
 
 @app.route('/delete/<n>')
@@ -94,9 +116,13 @@ def updateCountryByName():
             c=x
     c['capital'] =request.args.get('capital')
     c['continent'] =request.args.get('continent')
-        
+    c['area'] =int(request.args.get('area'))
+    c['population'] =int(request.args.get('population'))
+    c['gdp'] =float(request.args.get('gdp'))
+    c['tld'] =request.args.get('tld')
+    w.append(c)
     return render_template(
-            'countryedit.html',
+            'countrypage.html',
             c=c)
 
 app.run(host='0.0.0.0', port=8080, debug=True)

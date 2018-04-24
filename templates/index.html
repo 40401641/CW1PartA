@@ -5,6 +5,11 @@
 </head>
 <body>
 	<h1>World Factbook</h1>
+	<div>
+		{% for j in lota %}
+		<a href="/alpha/{{j}}" >{{j}}</a>
+		{% endfor %}
+	</div>
 	<div>There are {{w|length}} countries in this page</div>
 	<ul>
 		{% for c in w %}
