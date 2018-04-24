@@ -3,7 +3,7 @@ body{
 	/*background-image: url("static/img1.jpg");
 	background-repeat: no-repeat;
 	background-attachment: fixed;*/
-	background-color: #c1ddad;
+	background-color: #cccfff;
 }
 img.tiny{
 	width: 20px;
@@ -31,20 +31,23 @@ a{
 	text-decoration: none;
 	color: black;
 }
-
-ul#sort a:hover{
-	background-color: #4f6055;
+a:hover{
+	color: white;
 }
 
+}
+ul#sort a:hover{
+	background-color: #ff6666;
+}
 ul#sort a:link{
-	background-color: #37d66c;
+	background-color: #cc99ff;
 	color: white;
 	padding: 10px 10px;
 	text-align: center;
 	text-decoration: none;
 	display: inline-block;
 	list-style-type: none;
-	border: solid thin;
+	border: solid thin black;
 	border-radius: 1ex;
 }
 /*.nav_button{
