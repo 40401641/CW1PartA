@@ -3,7 +3,7 @@ body{
 	/*background-image: url("static/img1.jpg");
 	background-repeat: no-repeat;
 	background-attachment: fixed;*/
-	background-color: #cccfff;
+	background-color: #daad86;
 }
 img.tiny{
 	width: 20px;
@@ -33,15 +33,15 @@ a{
 }
 a:hover{
 	color: white;
+	font-size: 20px;
 }
 
-}
 ul#sort a:hover{
 	background-color: #ff6666;
 }
 ul#sort a:link{
-	background-color: #cc99ff;
-	color: white;
+	background-color: #fbeec1;
+	color: black;
 	padding: 10px 10px;
 	text-align: center;
 	text-decoration: none;

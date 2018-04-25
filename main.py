@@ -12,8 +12,8 @@ for c in w:
 page_size=20
 
 app=Flask(__name__)
-for c in w:
-	c['tld']=c['tld'][1:]
+# for c in w:
+# 	c['tld']=c['tld'][1:]
 
 @app.route('/')
 def index():
