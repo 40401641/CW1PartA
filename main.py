@@ -3,9 +3,9 @@ import json
 
 page_size=20
 w=json.load(open("worldl.json"))
-lota = sorted(list(set([c['name'][0] for c in w])))
+alp = sorted(list(set([c['name'][0] for c in w])))
 
-print (lota)
+print (alp)
 
 for c in w:
     c['tld']=c['tld'][1:]
@@ -21,7 +21,7 @@ def index():
    		w=w[0:page_size],
    		page_number=0,
         page_size=page_size,
-        lota=lota)
+        alp=alp)
 
 @app.route('/alpha/<a>')
 def alpha(a):
@@ -31,7 +31,7 @@ def alpha(a):
         length_of_c1=len(c1),
         c1 = c1,
         a = a,
-        lota=lota)
+        alp=alp)
 
 
 @app.route('/country/<i>')
@@ -62,7 +62,7 @@ def beginPage(b):
         w = w[bn:bn+page_size],
         page_number = bn,
         page_size = page_size,
-        lota=lota
+        alp=alp
         )
 
 @app.route('/delete/<n>')
